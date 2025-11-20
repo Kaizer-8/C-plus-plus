@@ -123,7 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C++.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Moves.cpp" />
+    <ClCompile Include="Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Moves.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
