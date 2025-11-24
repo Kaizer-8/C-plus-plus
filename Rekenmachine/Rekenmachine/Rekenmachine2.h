@@ -6,8 +6,8 @@ public:
 	~Rekenmachine2();//destructor
 
 	int Plus(int x, int y);
-	void Minus(int x, int y);
-	void Keer(int x, int y);
-	void Gedeeld(float x, float y);
+	int Minus(int x, int y);
+	int Keer(int x, int y);
+	float Gedeeld(float x, float y);
 };
 

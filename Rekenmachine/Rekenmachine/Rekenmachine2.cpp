@@ -16,17 +16,17 @@ int Rekenmachine2::Plus(int x, int y)
 	return x + y;
 }
 
-void Rekenmachine2::Minus(int x, int y)
+int Rekenmachine2::Minus(int x, int y)
 {
-	std::cout << x - y << std::endl;
+	return x - y;
 }
 
-void Rekenmachine2::Gedeeld(float x, float y)
+float Rekenmachine2::Gedeeld(float x, float y)
 {
-	std::cout << x / y << std::endl;
+	return x / y;
 }
 
-void Rekenmachine2::Keer(int x, int y)
+int Rekenmachine2::Keer(int x, int y)
 {
-	std::cout << x * y << std::endl;
+	return x * y;
 }

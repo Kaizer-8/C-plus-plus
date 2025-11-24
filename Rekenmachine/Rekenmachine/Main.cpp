@@ -23,14 +23,35 @@ int main()
     }
     else if (input == "minus") 
     {
-        //calc.Minus()
+        std::cout << "wich numbers do you want to subtract from" << std::endl;
+        std::getline(std::cin, x);
+        std::cout << "wich numbers do you want to subtract from the first" << std::endl;
+        std::getline(std::cin, y);
+        int intx = std::stoi(x);
+        int inty = std::stoi(y);
+        int antwoord = calc.Minus(intx, inty);
+        std::cout << antwoord << std::endl;
     }
     else if (input == "gedeeld") 
     {
-        Rekenmachine2 Gedeeld();
+        std::cout << "wich numbers do you want to divide" << std::endl;
+        std::getline(std::cin, x);
+        std::cout << "wich numbers do you want to divide from the first" << std::endl;
+        std::getline(std::cin, y);
+        int intx = std::stoi(x);
+        int inty = std::stoi(y);
+        int antwoord = calc.Gedeeld(intx, inty);
+        std::cout << antwoord << std::endl;
     }
     else if (input == "keer") 
     {
-        Rekenmachine2 Keer();
+        std::cout << "wich numbers do you want to multiply" << std::endl;
+        std::getline(std::cin, x);
+        std::cout << "wich numbers do you want to multiply from the first" << std::endl;
+        std::getline(std::cin, y);
+        int intx = std::stoi(x);
+        int inty = std::stoi(y);
+        int antwoord = calc.Keer(intx, inty);
+        std::cout << antwoord << std::endl;
     }
 }
