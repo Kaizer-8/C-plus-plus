@@ -30,3 +30,8 @@ int Rekenmachine2::Keer(int x, int y)
 {
 	return x * y;
 }
+
+int Rekenmachine2::Modulo(int x, int y) 
+{
+	return x % y;
+}

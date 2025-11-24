@@ -9,5 +9,6 @@ public:
 	int Minus(int x, int y);
 	int Keer(int x, int y);
 	float Gedeeld(float x, float y);
+	int Modulo(int x, int y);
 };
 
