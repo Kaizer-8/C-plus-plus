@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Stats::Stats(int aHp, int aDefence, int aMana, int aAttack) {
+Stats::Stats(int aHp, int aDefence, int aMana, int aAttack){
 	hp = aHp;
 	defence = aDefence;
 	mana = aMana;
