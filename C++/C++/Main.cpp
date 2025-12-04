@@ -7,6 +7,8 @@ int main()
 {
     std::cout << "Hello World!\n";
     Stats thePlayerStats(1,1,1,1);
-    Player ThePlayer(thePlayerStats);
+    Player thePlayer(thePlayerStats);
+    Stats retrievedStats = *thePlayer.GetPlayerStats();
+    std::cout << retrievedStats.
 }
 

@@ -3,14 +3,14 @@
 class Player
 {
 public:
-	Player(Stats ThePlayerStats);
+	Player(Stats &ThePlayerStats);
 	~Player();
 
-	int PlayerStats();
+	Stats* GetPlayerStats();
 	void PlayerMoves();
 	void PlayerInventory();
 
 private:
-	Stats playerStats;
+	Stats* playerStats;
 };
 

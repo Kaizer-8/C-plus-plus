@@ -4,24 +4,26 @@
 #include "Stats.h"
 
 
-Player::Player(Stats ThePlayerStats){
-	playerStats = ThePlayerStats;
+Player::Player(Stats &ThePlayerStats){
+	playerStats = &ThePlayerStats;
 }
 
 Player::~Player() {
 	
 }
 
-int PlayerStats() {
-
+Stats* Player::GetPlayerStats()
+{
+	return playerStats;
 }
 
-void PlayerMoves() {
-
+void Player::PlayerMoves()
+{
 }
 
-void PlayerInventory() {
-
+void Player::PlayerInventory()
+{
 }
+
 
 

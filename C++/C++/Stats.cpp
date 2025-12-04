@@ -7,8 +7,29 @@ Stats::Stats(int aHp, int aDefence, int aMana, int aAttack) {
 	defence = aDefence;
 	mana = aMana;
 	attack = aAttack;
+	//sets the stats from Stats.h to the variables to aHp enz. 
 }
 
 Stats::~Stats() {
 
+}
+
+int Stats::GetHP()
+{
+	return hp;
+}
+
+int Stats::GetDefense()
+{
+	return defence;
+}
+
+int Stats::GetMana()
+{
+	return mana;
+}
+
+int Stats::GetAttack()
+{
+	return attack;
 }
