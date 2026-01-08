@@ -7,8 +7,7 @@ public:
 	~Player();
 
 	Stats* GetPlayerStats();
-	void PlayerMoves();
-	void PlayerInventory();
+
 
 private:
 	Stats* playerStats;

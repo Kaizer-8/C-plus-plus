@@ -33,3 +33,23 @@ int Stats::GetAttack()
 {
 	return attack;
 }
+
+void Stats::SetHP(int someHP)
+{
+	hp = someHP;
+}
+
+void Stats::SetDefense(int someDefense)
+{
+	defence = someDefense;
+}
+
+void Stats::SetMana(int someMana)
+{
+	mana = someMana;
+}
+
+void Stats::SetAttack(int someAttack)
+{
+	attack = someAttack;
+}

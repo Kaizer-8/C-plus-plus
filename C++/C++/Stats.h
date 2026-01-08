@@ -10,10 +10,10 @@ public:
 	int GetMana();
 	int GetAttack();
 
-	//void SetHP(int someHP);
-	//void SetDefense(int someDefense);
-	//void SetMana(int someMana);
-	//void SetAttack(int someAttack);
+	void SetHP(int someHP);
+	void SetDefense(int someDefense);
+	void SetMana(int someMana);
+	void SetAttack(int someAttack);
 
 private:
 	//start the class with these variables.

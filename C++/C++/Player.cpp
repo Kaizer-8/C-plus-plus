@@ -17,13 +17,6 @@ Stats* Player::GetPlayerStats()
 	return playerStats;
 }
 
-void Player::PlayerMoves()
-{
-}
-
-void Player::PlayerInventory()
-{
-}
 
 
 

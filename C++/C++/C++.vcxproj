@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CombatFase.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -131,6 +132,7 @@
     <ClCompile Include="Stats.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CombatFase.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Moves.h" />
