@@ -11,6 +11,7 @@ public:
 	~CombatFase();
 
 	void StartCombat(Player& a, Enemy& b);
+	int SetHP(int someHP);
 private:
 };
 

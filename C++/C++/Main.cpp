@@ -14,7 +14,7 @@ int main()
     Player thePlayer(thePlayerStats);
     //makes a player variable with the playerstats wich is the one above
 
-    Stats theEnemyStats(1,1,1,1);
+    Stats theEnemyStats(5,1,1,1);
     Enemy theEnemy(theEnemyStats);
    
     combat.StartCombat(thePlayer, theEnemy);
