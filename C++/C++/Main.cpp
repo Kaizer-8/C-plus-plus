@@ -8,7 +8,6 @@
 #include<random>
 #include <cstdlib>
 #include <ctime>
-#include "Enemy.h"
 #include "Moves.h"
 
 int main()
@@ -28,7 +27,7 @@ int main()
     Enemy enemyGoblin{ goblin,"Goblin" };
     Enemy enemyKnight{ knight, "Knight" };
 
-    Moves fireBall(fireBall, 2);
+    Moves fireBall("fireball", 2);
     Moves Tackle("tackle", 1);
     enemyKnight.AddMove(Tackle);
     enemyKnight.AddMove(fireBall);

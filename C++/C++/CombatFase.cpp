@@ -4,6 +4,8 @@
 #include "Enemy.h"
 #include "Inventory.h"
 
+
+
 void CombatFase::StartCombat(Player& a, Enemy& b) {
 	if (BattleStart == true)
 	{
@@ -36,16 +38,16 @@ void CombatFase::StartCombat(Player& a, Enemy& b) {
 		{
 			if (input == "1")
 			{
-				int tempEnemyAttack = 0;
+				int tempAttack = 0;
 				if (EnemyDefending == true)
 				{
-					tempEnemyAttack = a.GetPlayerStats()->GetAttack() / 2;
+					tempAttack = a.GetPlayerStats()->GetAttack() / 2;
 				}
 				else
 				{
-					tempEnemyAttack = a.GetPlayerStats()->GetAttack();
+					tempAttack = a.GetPlayerStats()->GetAttack();
 				}
-				b.GetEnemyStats()->SetHP(b.GetEnemyStats()->GetHP() - tempEnemyAttack);
+				b.GetEnemyStats()->SetHP(b.GetEnemyStats()->GetHP() - tempAttack);
 				std::cout << "You attacked the enemy! Enemy HP is now: ";
 				std::cout << b.GetEnemyStats()->GetHP() << std::endl;
 				playerTurn = false;
@@ -54,9 +56,8 @@ void CombatFase::StartCombat(Player& a, Enemy& b) {
 			else if (input == "2")
 			{
 				isDefending = true;
-				std::cout << "You defended!" << std::endl;
 				playerTurn = false;
-				EnemyTurn(a, b);
+				EnemyTurn(a,b);
 			}
 			else
 			{
@@ -72,20 +73,23 @@ void CombatFase::EnemyTurn(Player& a, Enemy& b) {
 	int randomIndex = std::rand() % b.GetMoves().size();
 	Moves* chosenMove = b.GetMoves()[randomIndex];
 
-	if (isDefending == true)
+	if (isDefending == false)
 	{
-		tempAttack = b.GetEnemyStats()->GetAttack() / 2;
-		tempAttack = chosenMove-> / 2;
+		a.GetPlayerStats()->SetHP(a.GetPlayerStats()->GetHP() - chosenMove->GetDamage());
+		std::cout << "The enemy attacks with" << " " << chosenMove->GetName() << " and deals damage : " << chosenMove->GetDamage() << std::endl;
+		std::cout << a.GetPlayerStats()->GetHP() << " player hp remaining" << std::endl;
+		playerTurn = true;
+		StartCombat(a, b);
 	}
-	else
+	else if (isDefending == true)
 	{
-		tempAttack = b.GetEnemyStats()->GetAttack();
+		a.GetPlayerStats()->SetHP(a.GetPlayerStats()->GetHP() - (chosenMove->GetDamage() -1));
+		std::cout << "You defended!"<<" " << chosenMove->GetName() << " amount" << " " << chosenMove->GetDamage() << std::endl;
+		std::cout << "you have " << a.GetPlayerStats()->GetHP() << "hp remaining" << std::endl;
+		isDefending = false;
+		playerTurn = true;
+		StartCombat(a, b);
 	}
-	a.GetPlayerStats()->SetHP(a.GetPlayerStats()->GetHP() - tempAttack);
-	std::cout << "The enemy attacks and deals damage: " << std::endl;
-	std::cout << a.GetPlayerStats()->GetHP() << " player hp remaining" << std::endl;
-	playerTurn = true;
-	StartCombat(a,b);
 }
 
 void CombatFase::PlayerLose(Player& a) {

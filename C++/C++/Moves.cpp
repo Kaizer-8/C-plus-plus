@@ -1,15 +1,16 @@
 #include "Moves.h"
 
-Moves::Moves(std::string aName,int attack) {
-	
+Moves::Moves(std::string aName,int someAttack) {
+	Damage = someAttack;
+	Name = aName;
 }
 
-int Getdamage() {
-
+int Moves::GetDamage(){
+	return Damage;
 }
 
-std::string Getname() {
-
+std::string Moves::GetName() {
+	return Name;
 }
 
 Moves::~Moves() {

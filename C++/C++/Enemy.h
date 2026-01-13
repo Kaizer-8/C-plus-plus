@@ -17,6 +17,6 @@ public:
 private:
 	Stats* EnemyStats;
 	std::string name;
-	std::vector<Moves*> moves ;
+	std::vector<Moves*> moves;
 };
 
