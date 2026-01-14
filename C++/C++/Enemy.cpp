@@ -19,9 +19,9 @@ Stats* Enemy::GetEnemyStats()
 void Enemy::AddMove(Moves& aMove) {
 	moves.push_back(&aMove);
 }
-//void Enemy::AddMoves(std::vector<Moves*> someMoves) {
-//	moves.insert(moves.end(), someMoves.begin(), someMoves.end());
-//}
+void Enemy::AddMoves(std::vector<Moves*> someMoves) {
+	moves.insert(moves.end(), someMoves.begin(), someMoves.end());
+}
 std::vector<Moves*> Enemy::GetMoves() {
 	return moves;
 }
